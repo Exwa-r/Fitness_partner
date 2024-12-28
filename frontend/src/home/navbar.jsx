@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div className="flex">
       <div className="h-screen shadow-lg gap-10 bg-[#cfe6cf] w-32 flex flex-col items-center pl-2 pr-2">
-        <h2>FitMeal Partner</h2>
+        <h2 className="font-semibold pt-4">FitMeal Partner</h2>
         <ul className="gap-2 flex flex-col items-center">
           {Object.keys(pages).map((page) => (
             <li
