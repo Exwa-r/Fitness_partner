@@ -32,13 +32,13 @@ export default function Loginpage() {
 
   return (
     <>
-      <div className="h-screen w-screen flex gap-40 font-sans ">
+      <div className="h-screen w-screen flex gap-40 font-sans bg-white ">
         <img
           src="/image.jpeg"
           alt=""
           className="h-[600px] w-[600px] mt-[10%] ml-20"
         />
-        <div className="flex flex-col items-center gap-10 bg-[#ecffed] h-[50%] p-12 rounded mt-[15%]">
+        <div className="flex flex-col items-center gap-10 bg-[#ecffed] h-[50%] p-12 rounded-lg shadow-lg mt-[15%]">
           <h1 className="text-5xl font-semibold text-[#008e01]">
             FITMEAL PARTNER
           </h1>
