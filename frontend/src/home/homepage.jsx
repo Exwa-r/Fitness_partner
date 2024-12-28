@@ -10,7 +10,6 @@ export default function Homepage() {
       <div className="flex">
         <Navbar />
         <div className="flex flex-col">
-          <Header />
           <Components />
           <Imageslider />
           <Footer />
