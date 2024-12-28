@@ -11,6 +11,11 @@ export default function Components() {
     setExtraMeals([...extraMeals, meal]);
   };
 
+  const totalCalories = extraMeals.reduce(
+    (total, meal) => total + meal.calories,
+    0
+  );
+
   return (
     <>
       <Header onAddMeal={() => setShowPopup(true)} />
@@ -35,15 +40,15 @@ export default function Components() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex gap-2 justify-center">
-              <div className="border-2 border-black/50  rounded-lg gap-2 p-4 flex flex-col items-center">
+              <div className="border-2 border-black/50 rounded-lg gap-2 p-4 flex flex-col items-center">
                 <img src="/milk.png" className="size-24" alt="" />
                 <p>1/2 Glass Milk</p>
               </div>
-              <div className="border-2 border-black/50  rounded-lg p-4 gap-2 flex flex-col items-center">
+              <div className="border-2 border-black/50 rounded-lg p-4 gap-2 flex flex-col items-center">
                 <img src="/apple.png" className="size-24" alt="" />
                 <p>1 Apple</p>
               </div>
-              <div className="border-2 border-black/50   rounded-lg p-4 gap-2 flex flex-col items-center">
+              <div className="border-2 border-black/50 rounded-lg p-4 gap-2 flex flex-col items-center">
                 <img src="/Bread.png" className="size-24" alt="" />
                 <p>2 Bread</p>
               </div>
@@ -53,14 +58,22 @@ export default function Components() {
                 Today Target - 243 Calorie
               </p>
               <p className="bg-[#cfe6cf] rounded-lg p-1">
-                Your Customize - 567 Calories
+                Your Customize - {totalCalories} Calories
               </p>
             </div>
           </div>
         </div>
         <TodayExtraMeals extraMeals={extraMeals} />
-        <div className="bg-[#cfe6cf] w-[320px] rounded-lg">
-          <h3 className="p-3 font-semibold text-xl">Calories</h3>
+        <div className="bg-[#cfe6cf] w-[320px] rounded-lg p-3">
+          <h3 className="font-semibold text-xl">Calories Chart</h3>
+          <ul>
+            {extraMeals.map((meal, index) => (
+              <li key={index} className="mb-2">
+                {meal.name}: {meal.calories} Calories
+              </li>
+            ))}
+          </ul>
+          <p className="font-bold mt-2">Total Calories: {totalCalories}</p>
         </div>
       </div>
     </>
