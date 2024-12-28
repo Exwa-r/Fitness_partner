@@ -9,7 +9,7 @@ export default function Loginpage() {
   async function onformsubmit(e) {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3030/login", {
+      const response = await fetch(import.meta.env.VITE_API, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
