@@ -17,6 +17,15 @@ if (!CONNECTION) {
   process.exit(1);
 }
 
+app.get("/", (req, res) => {
+  try {
+    return res.send("Welcome to the fitness app");
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).send("Server error");
+  }
+});
+
 app.use("/", loginRoutes);
 
 const start = async () => {
