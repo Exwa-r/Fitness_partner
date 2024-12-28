@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   }
 });
 
-app.use("/", loginRoutes);
+app.use("/login", loginRoutes);
 
 const start = async () => {
   try {
