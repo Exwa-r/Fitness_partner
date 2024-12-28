@@ -3,6 +3,7 @@ import Navbar from "./navbar";
 import Header from "./header";
 import Components from "./components";
 import Footer from "./footer";
+import Imageslider from "./slider";
 export default function Homepage() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function Homepage() {
         <div className="flex flex-col">
           <Header />
           <Components />
+          <Imageslider />
           <Footer />
         </div>
       </div>

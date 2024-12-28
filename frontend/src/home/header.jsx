@@ -3,7 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <header>
-      <div className="flex w-[98%] pt-2 pb-3">
+      <div className="flex w-[90%] pt-2 pb-3">
         <h2 className="ml-3">Your Diet Planner</h2>
         <div className="flex ml-auto gap-4 ">
           <button className="bg-[#014801] px-4 py-1 rounded-lg text-white">

@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <>
-      <div className="h-screen shadow-lg gap-10 bg-[#cfe6cf] w-32 flex flex-col items-center">
+      <div className="h-screen shadow-lg gap-10 bg-[#cfe6cf] w-32 flex flex-col items-center pl-2 pr-2">
         <h2>FitMeal Partner</h2>
         <ul className="gap-2 flex flex-col items-center">
           <li className="bg-[#014801] px-6 rounded-lg text-white">Home</li>
